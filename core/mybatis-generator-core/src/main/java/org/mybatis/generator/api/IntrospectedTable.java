@@ -799,27 +799,22 @@ public abstract class IntrospectedTable {
         setSqlMapFullyQualifiedRuntimeTableName(calculateSqlMapFullyQualifiedRuntimeTableName());
         setSqlMapAliasedFullyQualifiedRuntimeTableName(calculateSqlMapAliasedFullyQualifiedRuntimeTableName());
 
-        setCountByExampleStatementId("countByExample"); //$NON-NLS-1$
-        setDeleteByExampleStatementId("deleteByExample"); //$NON-NLS-1$
-        //setDeleteByPrimaryKeyStatementId("deleteByPrimaryKey"); //$NON-NLS-1$
-        setDeleteByPrimaryKeyStatementId(UpMethodName.DELETE); // deleteByPrimaryKey改成delete
+        setCountByExampleStatementId(UpMethodName.COUNTBYEXAMPLE); //$NON-NLS-1$
+        setDeleteByExampleStatementId(UpMethodName.DELETEBYEXAMPLE); //$NON-NLS-1$
+        setDeleteByPrimaryKeyStatementId(UpMethodName.DELETEBYPRIMARYKEY); //$NON-NLS-1$
+        setInsertStatementId(UpMethodName.INSERT); //$NON-NLS-1$
+        setInsertSelectiveStatementId(UpMethodName.INSERTSELECTIVE); //$NON-NLS-1$
+        setSelectAllStatementId(UpMethodName.SELECTALL); //$NON-NLS-1$
+        setSelectByExampleStatementId(UpMethodName.SELECTBYEXAMPLE); //$NON-NLS-1$
+        setSelectByExampleWithBLOBsStatementId(UpMethodName.SELECTBYEXAMPLEWITHBLOBS); //$NON-NLS-1$
+        setSelectByPrimaryKeyStatementId(UpMethodName.SELECTBYPRIMARYKEY); //$NON-NLS-1$
+        setUpdateByExampleStatementId(UpMethodName.UPDATEBYEXAMPLE); //$NON-NLS-1$
+        setUpdateByExampleSelectiveStatementId(UpMethodName.UPDATEBYEXAMPLESELECTIVE); //$NON-NLS-1$
+        setUpdateByExampleWithBLOBsStatementId(UpMethodName.UPDATEBYEXAMPLEWITHBLOBS); //$NON-NLS-1$
+        setUpdateByPrimaryKeyStatementId(UpMethodName.UPDATEBYPRIMARYKEY); //$NON-NLS-1$
+        setUpdateByPrimaryKeySelectiveStatementId(UpMethodName.UPDATEBYPRIMARYKEYSELECTIVE); //$NON-NLS-1$
+        setUpdateByPrimaryKeyWithBLOBsStatementId(UpMethodName.UPDATEBYPRIMARYKEYWITHBLOBS); //$NON-NLS-1$
 
-        setInsertStatementId("insert"); //$NON-NLS-1$
-        //setInsertSelectiveStatementId("insertSelective"); //$NON-NLS-1$
-        setInsertSelectiveStatementId(UpMethodName.INSERT); // insertSelective改成insert
-
-        setSelectAllStatementId("selectAll"); //$NON-NLS-1$
-        setSelectByExampleStatementId("selectByExample"); //$NON-NLS-1$
-        setSelectByExampleWithBLOBsStatementId("selectByExampleWithBLOBs"); //$NON-NLS-1$
-        setSelectByPrimaryKeyStatementId("selectByPrimaryKey"); //$NON-NLS-1$
-        setUpdateByExampleStatementId("updateByExample"); //$NON-NLS-1$
-        setUpdateByExampleSelectiveStatementId("updateByExampleSelective"); //$NON-NLS-1$
-        setUpdateByExampleWithBLOBsStatementId("updateByExampleWithBLOBs"); //$NON-NLS-1$
-        setUpdateByPrimaryKeyStatementId("updateByPrimaryKey"); //$NON-NLS-1$
-        //setUpdateByPrimaryKeySelectiveStatementId("updateByPrimaryKeySelective"); //$NON-NLS-1$
-        setUpdateByPrimaryKeySelectiveStatementId(UpMethodName.UPDATE); // updateByPrimaryKeySelective改成update
-
-        setUpdateByPrimaryKeyWithBLOBsStatementId("updateByPrimaryKeyWithBLOBs"); //$NON-NLS-1$
         setBaseResultMapId("BaseResultMap"); //$NON-NLS-1$
         setResultMapWithBLOBsId("ResultMapWithBLOBs"); //$NON-NLS-1$
         setExampleWhereClauseId("Example_Where_Clause"); //$NON-NLS-1$
@@ -828,7 +823,7 @@ public abstract class IntrospectedTable {
         setMyBatis3UpdateByExampleWhereClauseId("Update_By_Example_Where_Clause"); //$NON-NLS-1$
 
         // 自定义方法
-        setSelectByConditionStatementId(UpMethodName.SELECT);
+        //setSelectByConditionStatementId(UpMethodName.SELECT);
     }
 
     /**

@@ -69,41 +69,43 @@ public class XMLMapperGenerator extends AbstractXmlGenerator {
 
         context.getCommentGenerator().addRootComment(answer);
 
-//        addResultMapWithoutBLOBsElement(answer);
-//        addResultMapWithBLOBsElement(answer);
-//        addExampleWhereClauseElement(answer);
-//        addMyBatis3UpdateByExampleWhereClauseElement(answer);
-//        addBaseColumnListElement(answer);
-//        addBlobColumnListElement(answer);
-//        addSelectByExampleWithBLOBsElement(answer);
-//        addSelectByExampleWithoutBLOBsElement(answer);
-//        addSelectByPrimaryKeyElement(answer);
-//        addDeleteByPrimaryKeyElement(answer);
-//        addDeleteByExampleElement(answer);
-//        addInsertElement(answer);
-//        addInsertSelectiveElement(answer);
-//        addCountByExampleElement(answer);
-//        addUpdateByExampleSelectiveElement(answer);
-//        addUpdateByExampleWithBLOBsElement(answer);
-//        addUpdateByExampleWithoutBLOBsElement(answer);
-//        addUpdateByPrimaryKeySelectiveElement(answer);
-//        addUpdateByPrimaryKeyWithBLOBsElement(answer);
-//        addUpdateByPrimaryKeyWithoutBLOBsElement(answer);
-
-        // 增加resultMap
         addResultMapWithoutBLOBsElement(answer);
-        // 增加baseColumnList
+        addResultMapWithBLOBsElement(answer);
+        addExampleWhereClauseElement(answer);
+        addMyBatis3UpdateByExampleWhereClauseElement(answer);
         addBaseColumnListElement(answer);
-
-        // 增加----新增方法
-        addInsertSelectiveElement(answer);
-        // 增加----根据主键更新的方法
-        addUpdateByPrimaryKeySelectiveElement(answer);
-        // 增加----根据主键删除的方法
+        addBlobColumnListElement(answer);
+        addSelectByExampleWithBLOBsElement(answer);
+        addSelectByExampleWithoutBLOBsElement(answer);
+        addSelectByPrimaryKeyElement(answer);
         addDeleteByPrimaryKeyElement(answer);
+        addDeleteByExampleElement(answer);
+        addInsertElement(answer);
+        addInsertSelectiveElement(answer);
+        addCountByExampleElement(answer);
+        addUpdateByExampleSelectiveElement(answer);
+        addUpdateByExampleWithBLOBsElement(answer);
+        addUpdateByExampleWithoutBLOBsElement(answer);
+        addUpdateByPrimaryKeySelectiveElement(answer);
+        addUpdateByPrimaryKeyWithBLOBsElement(answer);
+        addUpdateByPrimaryKeyWithoutBLOBsElement(answer);
 
-        // 自定义方法
-        addSelectByConditionElement(answer);
+//        // 增加resultMap
+//        addResultMapWithoutBLOBsElement(answer);
+//        // 增加baseColumnList
+//        addBaseColumnListElement(answer);
+//
+//        // 增加----新增方法
+//        // addInsertSelectiveElement(answer);
+//        addInsertElement(answer);
+//        // 增加----根据主键更新的方法
+//        addUpdateByPrimaryKeySelectiveElement(answer);
+//        // 增加----根据主键删除的方法
+//        addDeleteByPrimaryKeyElement(answer);
+//
+//
+//        // 自定义方法
+//        addSelectByConditionElement(answer);
 
         /**
         XMLMapperGenerator_Extend extend = new XMLMapperGenerator_Extend();

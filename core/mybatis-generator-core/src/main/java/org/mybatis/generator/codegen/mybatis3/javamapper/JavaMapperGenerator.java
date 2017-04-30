@@ -91,35 +91,36 @@ public class JavaMapperGenerator extends AbstractJavaClientGenerator {
             interfaze.addImportedType(fqjt);
         }
         
-//        addCountByExampleMethod(interfaze);
-//        addDeleteByExampleMethod(interfaze);
-//        addDeleteByPrimaryKeyMethod(interfaze);
-//        addInsertMethod(interfaze);
-//        addInsertSelectiveMethod(interfaze);
-//        addSelectByExampleWithBLOBsMethod(interfaze);
-//        addSelectByExampleWithoutBLOBsMethod(interfaze);
-//        addSelectByPrimaryKeyMethod(interfaze);
-//        addUpdateByExampleSelectiveMethod(interfaze);
-//        addUpdateByExampleWithBLOBsMethod(interfaze);
-//        addUpdateByExampleWithoutBLOBsMethod(interfaze);
-//        addUpdateByPrimaryKeySelectiveMethod(interfaze);
-//        addUpdateByPrimaryKeyWithBLOBsMethod(interfaze);
-//        addUpdateByPrimaryKeyWithoutBLOBsMethod(interfaze);
-
-
-        // 根据主键删除记录的方法
+        addCountByExampleMethod(interfaze);
+        addDeleteByExampleMethod(interfaze);
         addDeleteByPrimaryKeyMethod(interfaze);
-        // 新增方法
+        addInsertMethod(interfaze);
         addInsertSelectiveMethod(interfaze);
-        // 根据主键更新的方法
+        addSelectByExampleWithBLOBsMethod(interfaze);
+        addSelectByExampleWithoutBLOBsMethod(interfaze);
+        addSelectByPrimaryKeyMethod(interfaze);
+        addUpdateByExampleSelectiveMethod(interfaze);
+        addUpdateByExampleWithBLOBsMethod(interfaze);
+        addUpdateByExampleWithoutBLOBsMethod(interfaze);
         addUpdateByPrimaryKeySelectiveMethod(interfaze);
+        addUpdateByPrimaryKeyWithBLOBsMethod(interfaze);
+        addUpdateByPrimaryKeyWithoutBLOBsMethod(interfaze);
 
-        // 自定义的Dao方法
-        addSelectByConditionElement(interfaze);
 
-        // 在扩展方法里面修改Dao方法
-//        JavaMapperGenerator_Extend extend = new JavaMapperGenerator_Extend();
-//        extend.daoMethodInit(interfaze);
+//        // 根据主键删除记录的方法
+//        addDeleteByPrimaryKeyMethod(interfaze);
+//        // 新增方法
+//        // addInsertSelectiveMethod(interfaze);
+//        addInsertMethod(interfaze);
+//        // 根据主键更新的方法
+//        addUpdateByPrimaryKeySelectiveMethod(interfaze);
+//
+//        // 自定义的Dao方法
+//        addSelectByConditionElement(interfaze);
+//
+//        // 在扩展方法里面修改Dao方法
+////        JavaMapperGenerator_Extend extend = new JavaMapperGenerator_Extend();
+////        extend.daoMethodInit(interfaze);
 
         List<CompilationUnit> answer = new ArrayList<CompilationUnit>();
         if (context.getPlugins().clientGenerated(interfaze, null,
